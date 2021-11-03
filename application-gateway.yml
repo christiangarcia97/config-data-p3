@@ -1,7 +1,8 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka-service:8761/eureka/
+       defaultZone: http://localhost:8761/eureka/
+#      defaultZone: http://eureka-service:8761/eureka/
     register-with-eureka: false
     fetch-registry: false
 
@@ -13,14 +14,17 @@ spring:
           enabled: true
       routes:
         - id: application-customer
-          uri: http://customer-service:8081/
+          uri: http://localhost:8081/
+#          uri: http://customer-service:8081/
           predicates:
             - Path=/api/customers/**
         - id: application-account
-          uri: http://account-service:8082/
+          uri: http://localhost:8082/
+#          uri: http://account-service:8082/
           predicates:
             - Path=/api/accounts/**
         - id: application-transaction
-          uri: http://transaction-service:8083/
+          uri: http://localhost:8083/
+#          uri: http://transaction-service:8083/
           predicates:
             - Path=/api/transactions/**

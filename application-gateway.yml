@@ -28,3 +28,8 @@ spring:
 #          uri: http://transaction-service:8083/
           predicates:
             - Path=/api/transactions/**
+        - id: application-report
+          uri: http://localhost:8084/
+#          uri: http://transaction-service:8083/
+          predicates:
+            - Path=/api/reports/**

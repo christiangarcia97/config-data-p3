@@ -38,3 +38,8 @@ spring:
 #          uri: http://transaction-service:8083/
           predicates:
             - Path=/api/pockets/**
+        - id: application-pocket-transaction
+          uri: http://localhost:8086/
+#          uri: http://transaction-service:8083/
+          predicates:
+            - Path=/api/pocket-transactions/**
